@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>App moviles</title>
 </head>
 <body>
-    <h1>Pokeapi</h1>
-    <script href="script.js"></script>
+
+<!--Llamado de funciones-->
+    <nav>
+        <button onclick="Home()">Home</button>
+        <button onclick="Capturados()">Capturados</button>
+        <button onclick="Informativa()">Informativa</button>
+        <button onclick="Favoritos()">Favoritos</button>
+    </nav>
+
+    <div id="root">
+        <!--Aca se agrega lo que se hace en las funciones-->
+    </div>
+<!-- Llamado a los archivos js-->
+    <script src="js/capturados.js"></script>
+    <script src="js/conexion.js"></script>
+    <script src="js/favoritos.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/informativa.js"></script>
+    <script src="js/pokemon.js"></script>
 </body>
 </html>
