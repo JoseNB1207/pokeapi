@@ -8,6 +8,8 @@ async function Pokemon(id){
         for(let i=0; i<data.types.length; i++){
             tipoPoke += `<span>${data.types[i].type.name}</span>`
         }
+        document.getElementById("uno").classList.add(data.types[0].type.name);
+    
         var root = document.getElementById("root");
         root.innerHTML =`
         <section class="c-detalle">
@@ -23,7 +25,4 @@ async function Pokemon(id){
 
     </section>` ;
 }
-Pokemon(5)
-Pokemon(43)
-Pokemon(1025)
-Pokemon(1024)
+
