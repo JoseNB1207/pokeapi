@@ -1,73 +1,19 @@
-/* Colores inspirados en los tipos clásicos de Pokémon */
-
-body.normal {
-  background-color: #A8A77A; /* beige/verde oliva */
-}
-
-body.fighting {
-  background-color: #C22E28; /* rojo oscuro */
-}
-
-body.flying {
-  background-color: #A98FF3; /* lila */
-}
-
-body.poison {
-  background-color: #A33EA1; /* púrpura */
-}
-
-body.ground {
-  background-color: #E2BF65; /* marrón claro */
-}
-
-body.rock {
-  background-color: #B6A136; /* marrón grisáceo */
-}
-
-body.bug {
-  background-color: #A6B91A; /* verde lima */
-}
-
-body.ghost {
-  background-color: #735797; /* morado oscuro */
-}
-
-body.steel {
-  background-color: #B7B7CE; /* gris acero */
-}
-
-body.fire {
-  background-color: #EE8130; /* naranja */
-}
-
-body.water {
-  background-color: #6390F0; /* azul */
-}
-
-body.grass {
-  background-color: #7AC74C; /* verde */
-}
-
-body.electric {
-  background-color: #F7D02C; /* amarillo */
-}
-
-body.psychic {
-  background-color: #F95587; /* rosa fuerte */
-}
-
-body.ice {
-  background-color: #96D9D6; /* azul hielo */
-}
-
-body.dragon {
-  background-color: #6F35FC; /* púrpura brillante */
-}
-body.dark {
-  background-color: #705746; /* marrón oscuro */
-}
-
-body.fairy {
-  background-color: #D685AD; /* rosa pálido */
-}
+body.normal    { background-color: #A8A77A; color: white; }
+body.fighting  { background-color: #C22E28; color: white; }
+body.flying    { background-color: #A98FF3; color: white; }
+body.poison    { background-color: #A33EA1; color: white; }
+body.ground    { background-color: #E2BF65; color: black; }
+body.rock      { background-color: #B6A136; color: white; }
+body.bug       { background-color: #A6B91A; color: black; }
+body.ghost     { background-color: #735797; color: white; }
+body.steel     { background-color: #B7B7CE; color: black; }
+body.fire      { background-color: #EE8130; color: white; }
+body.water     { background-color: #6390F0; color: white; }
+body.grass     { background-color: #7AC74C; color: black; }
+body.electric  { background-color: #F7D02C; color: black; }
+body.psychic   { background-color: #F95587; color: white; }
+body.ice       { background-color: #96D9D6; color: black; }
+body.dragon    { background-color: #6F35FC; color: white; }
+body.dark      { background-color: #705746; color: white; }
+body.fairy     { background-color: #D685AD; color: black; }
 

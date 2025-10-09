@@ -1,21 +1,21 @@
 function generarLista(arraypokemones) {
     let listaHTML = "";
     for (let i = 0; i < arraypokemones.length; i++) {
-       let id = arraypokemones[i].url.split("/")[6];
+        let id = arraypokemones[i].url.split("/")[6];
         listaHTML += `
-        <div class="c-lista-pokemon poke-${id}" onclick="Detalle('${id}')">
+        <div class="c-lista-pokemon poke-${id}" onclick="Pokemon('${id}')">
             <p>#${id}</p>
             <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png" width="auto" height="60" loading="lazy" alt="${arraypokemones[i].name}">
             <p>${arraypokemones[i].name}</p>
         </div>`;
     }
+    console.log(listaHTML)
     return listaHTML;
 }
-generarLista(pokemones);
 
 
 
-function buscadorfuncion(sza){
+    function buscadorfuncion(sza){
     if(sza.length >= 3){
         const filtrados = [];
         for (let i = 0; i < pokemones.length; i++) {
@@ -32,22 +32,16 @@ function buscadorfuncion(sza){
     }
 }
 
-
 function Home(){
-      //buscador
-    const buscador = document.createElement("input");
+     const buscador = document.createElement("input");
     buscador.classList.add("c-buscador");
     buscador.type = "text";
     buscador.placeholder = "Buscar Pokémon...";
     buscador.addEventListener("input", () => {
-    buscadorfuncion(buscador.value)
-});
+            buscadorfuncion(buscador.value);
+    });
 
-    
-}
-
- //contenedor filtro
-    const tipos = [
+        const tipos = [
         "normal", "fighting", "flying", "poison", "ground", "rock", "bug",
         "ghost", "steel", "fire", "water", "grass", "electric", "psychic", "ice",
         "dragon", "dark", "fairy", "stellar", "unknown"
@@ -67,17 +61,15 @@ function Home(){
 
         // Agregar el botón al contenedor
         contenedorFiltro.appendChild(btn);
+    }
 
-        const listaHTML = generarLista(pokemones);
+    const listaHTML = generarLista(pokemones);
+    var contenedorPokes = document.createElement("section")
+    contenedorPokes.id ="la-lista";
+    contenedorPokes.innerHTML = listaHTML;
 
-        var contenedorPokes = document.createElement("section");
-        contenedorPokes.id = "la-lista";
-        contenedorLista.innerHTML = listaHTML;
-        document.getElementById("root").appendChild(contenedorFiltro);
-        document.getElementById("root").appendChild(contenedorPokes);
-        
-    }   
 
-       
-
-    
+    document.getElementById("root").appendChild (buscador);
+    document.getElementById("root").appendChild(contenedorFiltro);
+    document.getElementById("root").appendChild(contenedorPokes);
+}

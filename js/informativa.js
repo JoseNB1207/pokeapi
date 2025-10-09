@@ -1,3 +1,3 @@
 function Informativa(){
-    document.getElementById('root').innerHTML ="info"
+    document.getElementById("root").innerHTML = "Informativa"
 }

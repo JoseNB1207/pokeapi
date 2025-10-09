@@ -1,17 +1,11 @@
-
-var totalPokes = 1024;
-var pokemones = [];
-
-
+var totalPokes = 1025
+var pokemones = []
 async function Conexion(filtrotipo){
-
-if(filtrotipo == "All"){
+     if(filtrotipo == "All"){
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon?limit=${totalPokes}`);
     const data = await res.json();
     return data.results;
-  }
-  
-  else{
+  }else{
     const res = await fetch(`https://pokeapi.co/api/v2/type/${filtrotipo}`);
     const data = await res.json();
 
@@ -21,19 +15,17 @@ if(filtrotipo == "All"){
     }
     return pokemonesTipo;
   }
-
+    
 }
 
 async function General() {
   if (pokemones.length === 0) {
-    pokemones = await Conexion("All")
+    pokemones = await Conexion("ALL");
   }
   Home();
 }
 
-
 General();
-
 async function FiltroConexion(Elfiltro){
   document.getElementById("la-lista").innerHTML = "";
   pokemones = await Conexion(Elfiltro);
